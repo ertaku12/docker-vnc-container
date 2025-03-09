@@ -16,6 +16,14 @@ RUN apt update \
 
 `docker run --name vnc_container  -p 5901:5901 -p 6901:6901 -it vnc`
 
+```
+cd ..
+dir_to_mount=$(pwd)
+
+#additional-feature:
+ -v $dir_to_mount:/shared_drive
+```
+
 
 # Docker container images with "headless" VNC session
 
