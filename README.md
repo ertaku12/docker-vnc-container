@@ -13,6 +13,7 @@ RUN apt update \
 
 ## Commands
 `docker build -t vnc .`
+
 `docker run --name vnc_container  -p 5901:5901 -p 6901:6901 -it vnc`
 
 
