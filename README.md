@@ -1,3 +1,21 @@
+## Dockerfile
+```
+FROM consol/debian-xfce-vnc
+
+#switches default user to root
+USER 0
+
+RUN apt update \
+&& apt install gcc -y \
+&& apt install build-essential -y \
+&& apt install unzip -y 
+```
+
+## Commands
+`docker build -t vnc .`
+`docker run --name vnc_container  -p 5901:5901 -p 6901:6901 -it vnc`
+
+
 # Docker container images with "headless" VNC session
 
 This repository contains a collection of Docker images with headless VNC environments.
